@@ -1,0 +1,131 @@
+.logo {
+    margin-left: 38.5%;
+    margin-top: 62px;
+}
+
+.inp {
+    text-align: center;
+}
+
+.inpt {
+    margin: 2px 0 0 -40px;
+    border-radius: 35px;
+    width: 375px;
+    height: 35px;
+    border: solid 1px rgb(255, 255, 255);
+    outline: none;
+}
+
+.inptarea {
+    display: inline-block;
+    margin-top: 17px;
+    border-radius: 35px;
+    width: 41%;
+    height: 44px;
+    border: solid 1px rgb(226, 214, 214);
+    outline: none;
+}
+
+.inptarea:hover {
+    box-shadow: 1px 1px 5px rgb(226, 214, 214);
+}
+
+.search {
+    width: 15px;
+    position: relative;
+    left: 40px;
+    top: 3px;
+}
+
+.keyboard {
+    width: 20px;
+    position: relative;
+    left: -100px;
+    top: 3px;
+}
+
+.mic {
+    height: 30px;
+    position: relative;
+    left: -75px;
+    top: 10px;
+}
+
+button {
+    background-color: #f8f9fa;
+    border: solid 1px #f2f2f2;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5f6368;
+}
+
+.btn {
+    text-align: center;
+    margin: 30px 15px 0 -10px;
+    margin-bottom: 17.5%;
+}
+
+button:hover {
+    box-shadow: 1px 1px 5px #bbbbbb;
+}
+
+.top-right {
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: -69px;
+}
+
+ul>li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 12px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5f6368;
+}
+
+.profil {
+    border-radius: 50%;
+    width: 27px;
+    position: relative;
+    top: 5px;
+}
+
+.apps {
+    width: 18px;
+}
+
+footer {
+    width: 100.5%;
+}
+
+footer>div {
+    background-color: #f2f2f2;
+}
+
+.city {
+    height: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5f6368;
+    padding: 15px 0 0 17px;
+    margin-bottom: -10px;
+}
+
+.default {
+    margin-top: -7px;
+    height: 52px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5f6368;
+    display: flex;
+    justify-content: space-between;
+}
+
+.karbon {
+    margin-top: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5f6368;
+}
