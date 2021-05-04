@@ -1,0 +1,40 @@
+h1 {
+    color: aquamarine;
+    text-align: center;
+}
+
+ol li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 40px 0 0;
+    color: coral;
+}
+
+ol {
+    text-align: center;
+}
+
+
+.card{
+    height: 400px;
+}
+.adrs{
+    margin: auto;
+    margin-top: 8%;
+    width: 50%;
+    
+}
+.laptop {
+    list-style-type: none;
+}
+.lnk{
+    text-decoration: none;
+}
+
+figcaption {
+    text-align: center;
+}
+
+body {
+    background-color: #E9ECEF !important;
+}
