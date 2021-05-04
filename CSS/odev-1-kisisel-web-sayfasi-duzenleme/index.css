@@ -1,0 +1,30 @@
+h1 {
+    color: aquamarine;
+    text-align: center;
+}
+
+ol li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 40px 0 0;
+    color: coral;
+}
+
+ol {
+    text-align: center;
+}
+
+img {
+    width: 640px;
+    height: 640px;
+    position: relative;
+    left: 320px;
+}
+
+.laptop {
+    list-style-type: none;
+}
+
+figcaption {
+    text-align: center;
+}
