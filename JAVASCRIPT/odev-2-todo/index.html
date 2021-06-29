@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="src/style.css">
+	<title>Kodluyoruz Task List</title>
+</head>
+
+<body>
+	
+		<div style="position: absolute; top: 0; right: 0">
+		  <div
+			id="liveToast"
+			class="toast error hide"
+			role="alert"
+			aria-live="assertive"
+			aria-atomic="true"
+			data-delay="4000"
+		  >
+			<div class="toast-body">Listeye boş ekleme yapamazsınız!</div>
+		  </div>
+		</div>
+		<div style="position: absolute; top: 0; right: 0">
+			<div
+			  id="liveToast"
+			  class="toast success hide"
+			  role="alert"
+			  aria-live="assertive"
+			  aria-atomic="true"
+			  data-delay="4000"
+			>
+			  <div class="toast-body">Not başarıyla eklendi!</div>
+			</div>
+		  </div>
+		  <div style="position: absolute; top: 0; right: 0">
+			<div
+			  id="liveToast"
+			  class="toast complete hide"
+			  role="alert"
+			  aria-live="assertive"
+			  aria-atomic="true"
+			  data-delay="4000"
+			>
+			  <div class="toast-body">Not başarıyla silindi!</div>
+			</div>
+		  </div>
+	  
+	<div class="container mt-5">
+		<div class="header">
+		  <img
+			src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+			class="mb-1"
+			alt=""
+		  />
+		  <h2>Yapılacaklar Listesi</h2>
+		  <input type="text" id="task" placeholder="Bugün ne yapacaksın?" />
+		  <span id="liveToastBtn" class="button">Ekle</span>
+		</div>
+	  
+		<ul id="list">
+		  <li class="list-item">
+			3 Litre Su İç
+			<a href="#" class="clear">X</a>
+		  </li>
+	  
+		  <li class="list-item">
+			Ödevleri Yap
+			<a href="#" class="clear">X</a>
+		  </li>
+	  
+		  <li class="list-item">
+			En Az 3 Saat Kodlama Yap
+			<a href="#" class="clear">X</a>
+		  </li>
+	  
+		  <li class="list-item">
+			Yemek Yap
+			<a href="#" class="clear">X</a>
+		  </li>
+	  
+		  <li class="list-item">
+			50 Sayfa Kitap Oku
+			<a href="#" class="clear">X</a>
+		  </li>
+		</ul>
+		
+		
+	  </div>
+	</div>
+	<script src="src/script.js"></script>
+	</body>
+
+</html>
