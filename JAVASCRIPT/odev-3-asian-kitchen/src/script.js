@@ -98,6 +98,7 @@ buttons.forEach((btn) => {
                 `;
       }
     } else if (e.target.value === "korea") {
+      document.querySelector(".row").innerHTML = "";
       menu
         .filter((countryName) => countryName.category === "Korea")
         .map((countryName) => {
@@ -121,6 +122,7 @@ buttons.forEach((btn) => {
             `;
         });
     } else if (e.target.value === "japan") {
+      document.querySelector(".row").innerHTML = "";
       menu
         .filter((countryName) => countryName.category === "Japan")
         .map((countryName) => {
@@ -143,11 +145,12 @@ buttons.forEach((btn) => {
          
               `;
         });
-    }else if (e.target.value === "china") {
-        menu
-          .filter((countryName) => countryName.category === "China")
-          .map((countryName) => {
-            document.querySelector(".row").innerHTML += `
+    } else if (e.target.value === "china") {
+      document.querySelector(".row").innerHTML = "";
+      menu
+        .filter((countryName) => countryName.category === "China")
+        .map((countryName) => {
+          document.querySelector(".row").innerHTML += `
            
                 <div class="menu-items col-lg-6 col-sm-12 justify-content-between">
                 <img
@@ -165,7 +168,7 @@ buttons.forEach((btn) => {
               </div>
            
                 `;
-          });
-      }
+        });
+    }
   });
 });
