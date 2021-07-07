@@ -1,0 +1,16 @@
+{
+  "name": "odev-1-getdata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "\"Ebubekir Pamuk <ebubekirpamukk@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "requirejs": "^2.3.6"
+  }
+}
