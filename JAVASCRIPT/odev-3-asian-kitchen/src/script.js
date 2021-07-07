@@ -74,9 +74,11 @@ const menu = [
 ];
 
 let buttons = document.querySelectorAll(".btn");
+
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     if (e.target.value === "all") {
+      document.querySelector(".row").innerHTML = "";
       for (let i = 0; i < menu.length; i++) {
         document.querySelector(".row").innerHTML += `
        
@@ -90,9 +92,9 @@ buttons.forEach((btn) => {
                   <div class="menu-title">
                     <h4 class="title">${menu[i].title}</h4>
                     <h4 class="price">${menu[i].price}</h4>
-                  </div>
-                  <div class="menu-text">${menu[i].desc}</div>
-                </div>
+        </div>
+        <div class="menu-text">${menu[i].desc}</div>
+        </div>
               </div>
            
                 `;
