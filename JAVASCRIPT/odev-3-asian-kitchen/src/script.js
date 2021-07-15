@@ -73,104 +73,71 @@ const menu = [
   },
 ];
 
-let buttons = document.querySelectorAll(".btn");
+const section = document.querySelector(".section-center");
+const btnContainer = document.querySelector(".btn-container");
 
-buttons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    if (e.target.value === "all") {
-      document.querySelector(".row").innerHTML = "";
-      for (let i = 0; i < menu.length; i++) {
-        document.querySelector(".row").innerHTML += `
-       
-                <div class="menu-items col-lg-6 col-sm-12 justify-content-between">
-                <img
-                  class="photo"
-                  src="${menu[i].img}"
-                  alt=""
-                />
-                <div class="menu-info">
-                  <div class="menu-title">
-                    <h4 class="title">${menu[i].title}</h4>
-                    <h4 class="price">${menu[i].price}</h4>
-        </div>
-        <div class="menu-text">${menu[i].desc}</div>
-        </div>
-              </div>
-           
-                `;
+const categories = menu.reduce(
+  (values, item) => {
+    if (!values.includes(item.category)) {
+      values.push(item.category);
+    }
+    return values;
+  },
+  ["All"]
+);
+
+const categoryList = () => {
+  const categoryBtns = categories
+    .map((category) => {
+      return `<button class="btn btn-outline-dark btn-item" data-id=${category}>${category}</button>`;
+    })
+    .join("");
+
+  btnContainer.innerHTML = categoryBtns;
+  const filterBtns = document.querySelectorAll(".btn-item");
+
+  //filter menu
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const category = e.currentTarget.dataset.id;
+      console.log(category);
+      const menuCategory = menu.filter((menuItem) => {
+        if (menuItem.category === category) {
+          return menuItem;
+        }
+      });
+      if (category === "All") {
+        menuList(menu);
+      } else {
+        menuList(menuCategory);
       }
-    } else if (e.target.value === "korea") {
-      document.querySelector(".row").innerHTML = "";
-      menu
-        .filter((countryName) => countryName.category === "Korea")
-        .map((countryName) => {
-          document.querySelector(".row").innerHTML += `
-       
-            <div class="menu-items col-lg-6 col-sm-12 justify-content-between">
+    });
+  });
+};
+
+const menuList = (menuItems) => {
+  let displayMenu = menuItems.map((item) => {
+    return `<div class="menu-items col-lg-6 col-sm-12">
             <img
+              src=${item.img}
+              alt=${item.title}
               class="photo"
-              src="${countryName.img}"
-              alt=""
             />
             <div class="menu-info">
               <div class="menu-title">
-                <h4 class="title">${countryName.title}</h4>
-                <h4 class="price">${countryName.price}</h4>
+                <h4>${item.title}</h4>
+                <h4 class="price">${item.price}</h4>
               </div>
-              <div class="menu-text">${countryName.desc}</div>
+              <div class="menu-text">
+                ${item.desc}
+              </div>
             </div>
           </div>
-       
-            `;
-        });
-    } else if (e.target.value === "japan") {
-      document.querySelector(".row").innerHTML = "";
-      menu
-        .filter((countryName) => countryName.category === "Japan")
-        .map((countryName) => {
-          document.querySelector(".row").innerHTML += `
-         
-              <div class="menu-items col-lg-6 col-sm-12 justify-content-between">
-              <img
-                class="photo"
-                src="${countryName.img}"
-                alt=""
-              />
-              <div class="menu-info">
-                <div class="menu-title">
-                  <h4 class="title">${countryName.title}</h4>
-                  <h4 class="price">${countryName.price}</h4>
-                </div>
-                <div class="menu-text">${countryName.desc}</div>
-              </div>
-            </div>
-         
-              `;
-        });
-    } else if (e.target.value === "china") {
-      document.querySelector(".row").innerHTML = "";
-      menu
-        .filter((countryName) => countryName.category === "China")
-        .map((countryName) => {
-          document.querySelector(".row").innerHTML += `
-           
-                <div class="menu-items col-lg-6 col-sm-12 justify-content-between">
-                <img
-                  class="photo"
-                  src="${countryName.img}"
-                  alt=""
-                />
-                <div class="menu-info">
-                  <div class="menu-title">
-                    <h4 class="title">${countryName.title}</h4>
-                    <h4 class="price">${countryName.price}</h4>
-                  </div>
-                  <div class="menu-text">${countryName.desc}</div>
-                </div>
-              </div>
-           
-                `;
-        });
-    }
+    `;
   });
-});
+  displayMenu = displayMenu.join("");
+  section.innerHTML = displayMenu;
+};
+
+menuList(menu);
+categoryList();
